@@ -1,0 +1,206 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Custom Theme
+*********************************/
+.flexslider {
+    margin: 0;
+    position: relative;
+}
+
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.loading .flex-viewport {
+    max-height: 300px;
+}
+
+.flexslider .slides {
+    *zoom: 1;
+}
+
+.flexslider .slides li {
+    position: relative;
+    display: none;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+    z-index: 999;
+}
+
+.flex-direction-nav li a {
+    top: 50%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    opacity: 0;
+    margin-top: -16px;
+    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.lt-ie9 .flex-direction-nav li a {
+    display: none;
+}
+
+.flexslider:hover .flex-direction-nav li a {
+    opacity: 1;
+}
+
+.lt-ie9 .flexslider:hover .flex-direction-nav li a {
+    display: block;
+}
+
+.flex-direction-nav li .flex-prev {
+    left: -20px;
+}
+
+.flex-direction-nav li .flex-next {
+    right: -20px;
+}
+
+.flexslider:hover .flex-direction-nav li .flex-prev {
+    left: 10px;
+}
+
+.flexslider:hover .flex-direction-nav li .flex-next {
+    right: 10px;
+}
+
+.flexslider:hover .flex-direction-nav li a:hover {
+    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.flex-direction-nav li a:after {
+    content: '';
+    top: 50%; left: 50%;
+    margin-top: -6px;
+    margin-left: -10px;
+    position: absolute;
+    border: 6px solid transparent;
+    border-right-color: #fff;
+}
+
+.flex-direction-nav li a.flex-next:after {
+    border-left-color: #fff;
+    margin-left: -2px;
+    border-right-color: transparent;
+}
+
+/* Control Nav */
+.flex-control-nav {
+    left: 0; right: 0;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+}
+
+.flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-color: #666;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.flex-control-paging li a:hover {
+    background-color: #444;
+}
+
+.flex-control-paging li a.flex-active {
+    background-color: #444;
+    cursor: default;
+}
+
+/* Flex Caption */
+.flex-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 40%;
+    font-size: 13px;
+    color: #fff;
+    padding: 12px 24px;
+    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex-caption h2 {
+    color: #fff;
+}
+
+/* Control Thumbs */
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media only screen and (max-width: 767px) {
+    .flex-caption {
+        display: none;
+    }
+}
