@@ -11,11 +11,11 @@
 		
 		<title><?php wp_title('-', true, 'right'); ?> <?php bloginfo('name') ?></title>
 		
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/style.css">
 		
-		<script type="text/javascript" src="<?php blogingo('template_url') ?>/js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="https://oss.maxcdn.com/libs/jquery/2.0.3/jquery.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js - IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
