@@ -9,11 +9,11 @@
 		<meta name="author" content="Wade Urry - http://www.iwader.co.uk/">
 		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.ico">
 		
-		<title><?php wp_title('-', true, 'right'); ?> <?php bloginfo('name') ?></title>
+		<title><?php wp_title('-', true, 'right') ?> <?php bloginfo('name') ?></title>
 		
 		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/style.css">
 		
 		<script type="text/javascript" src="https://oss.maxcdn.com/libs/jquery/2.0.3/jquery.min.js"></script>
 		
