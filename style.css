@@ -50,7 +50,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 
 /* Allow padding for the top navbar so it doesn't cover our content */
 #wrap > .container {
-	padding: 90px 15px 0;
+	padding: 120px 15px 0;
 }
 
 #content {

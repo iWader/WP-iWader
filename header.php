@@ -23,6 +23,10 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
         
+        <?php if (current_user_can('manage_options')) : ?>
+        <style type="text/css">#wpadminbar { top: 90px !important; }</style>
+        <?php endif; ?>
+        
         <?php wp_head(); ?>
 	</head>
     <body>
