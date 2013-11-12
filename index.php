@@ -55,7 +55,12 @@
                             </div>
                             <?php endif; ?>
 
-                            <p><?php the_content('') ?></p>
+                            <p><?php if (is_category() || is_archive() || is_home()) {
+                                         the_excerpt();
+                                     } else {
+                                         the_content('');
+                                     }
+                               ?></p>
                         </div>
 
                         <?php if (!is_single()) : ?>
