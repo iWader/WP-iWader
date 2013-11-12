@@ -212,28 +212,44 @@ ul.tag-labels > li:active > span {
 
 @font-face {
     font-family: 'Amaranth';
-    src: url('../fonts/Amaranth-Regular.otf');
+    src: url('fonts/Amaranth-webfont.eot');
+    src: url('fonts/Amarnath-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amaranth-webfont.woff') format('woff'),
+         url('fonts/Amaranth-webfont.ttf') format('truetype'),
+         url('fonts/Amaranth-webfont.svg#AmaranthRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Amaranth';
-    src: url('../fonts/Amaranth-Bold.otf');
+    src: url('fonts/Amaranth-Bold-webfont.eot');
+    src: url('fonts/Amaranth-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amaranth-Bold-webfont.woff') format('woff'),
+         url('fonts/Amaranth-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Amaranth-Bold-webfont.svg#AmaranthBold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Amaranth';
-    src: url('../fonts/Amaranth-BoldItalic.otf');
+    src: url('fonts/Amaranth-BoldItalic-webfont.eot');
+    src: url('fonts/Amaranth-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amaranth-BoldItalic-webfont.woff') format('woff'),
+         url('fonts/Amaranth-BoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/Amaranth-BoldItalic-webfont.svg#AmaranthBoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Amaranth';
-    src: url('../fonts/Amaranth-Italic.otf');
+    src: url('fonts/Amaranth-Italic-webfont.eot');
+    src: url('fonts/Amaranth-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amaranth-Italic-webfont.woff') format('woff'),
+         url('fonts/Amaranth-Italic-webfont.ttf') format('truetype'),
+         url('fonts/Amaranth-Italic-webfont.svg#AmaranthItalic') format('svg');
     font-weight: normal;
     font-style: italic;
 }
