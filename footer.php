@@ -33,3 +33,9 @@
         </div>
     </div>
 </footer>
+
+<?php wp_footer() ?>
+
+<?php if (current_user_can('manage_options')) : ?>
+<!-- <?php echo get_num_queries() ?> queries. <?php timer_stop(1); ?> seconds. -->
+<?php endif; ?>
