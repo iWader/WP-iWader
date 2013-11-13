@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Fullwidth (No Sidebar)
+*/
+?>
+
 <?php get_header() ?>
 
         <div class="page-header">
@@ -5,7 +11,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
 
                 <?php if (have_posts()) : ?>
 
@@ -32,8 +38,6 @@
                 <?php endif; ?>
 
             </div>
-
-            <?php get_sidebar() ?>
         </div>
     </div>
 </div>
