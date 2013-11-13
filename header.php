@@ -27,7 +27,8 @@
         <style type="text/css">#wpadminbar { top: 90px !important; }</style>
         <?php endif; ?>
         
-        <?php wp_head(); ?>
+        <?php if (is_singular()) wp_enqueue_script( 'comment-reply' ) ?>
+        <?php wp_head() ?>
 	</head>
     <body>
 		<div id="wrap">

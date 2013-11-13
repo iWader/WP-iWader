@@ -659,7 +659,7 @@ footer #bottom-footer .copyright {
 	list-style: none;
 }
 
-.blog .post .comments > ul > li {
+.blog .post .comments ul > li {
 	padding: 20px 0;
 }
 
@@ -667,14 +667,13 @@ footer #bottom-footer .copyright {
 	border-top: 1px dotted #dddddd;
 }
 
-.blog .post .comments ul li ul li ul li:last-child  {
+.blog .post .comments ul.children li:last-child  {
 	margin-bottom: 20px;
 	border-bottom: 1px dotted #dddddd;
 }
 
 .blog .post .comments ul li .photo {
 	width: 80px;
-	height: 10px;
 	float: left;
 }
 
@@ -697,6 +696,11 @@ footer #bottom-footer .copyright {
 .blog .post .comments ul li .body .head .date {
 	font-size: 13px;
 	color: #aaaaaa;
+}
+
+/* WP comment threading */
+.blog .post .comments ul.children {
+    padding-left: 80px;
 }
 
 /***** Portfolio *****/
