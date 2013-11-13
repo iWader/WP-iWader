@@ -30,7 +30,7 @@ Template Name: Fullwidth (No Sidebar)
                     </div>
                     
                     <?php the_content() ?>
-                        
+                    
                 </article>
 
                 <?php endwhile; ?>

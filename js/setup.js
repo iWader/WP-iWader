@@ -1,11 +1,11 @@
-$(window).load(function() {
+$(document).ready(function() {
 	
 	/*	--------------------------------------------------------------------
 		FlexSlider
 	------------------------------------------------------------------------ */
 	
-	$('.portfolio .flexslider').flexslider({
-		controlNav: false
+	$('.flexslider').flexslider({
+		controlNav: true
 	});
 	
 	/*	--------------------------------------------------------------------

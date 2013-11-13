@@ -35,6 +35,7 @@
 </footer>
 
 <?php wp_footer() ?>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/setup.js"></script>
 
 <?php if (current_user_can('manage_options')) : ?>
 <!-- <?php echo get_num_queries() ?> queries. <?php timer_stop(1); ?> seconds. -->
