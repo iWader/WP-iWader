@@ -35,6 +35,7 @@
 </footer>
 
 <?php wp_footer() ?>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/setup.js"></script>
 
 <?php if (current_user_can('manage_options')) : ?>

@@ -134,4 +134,77 @@
         return $output;
     }
     
+    function iwader_portfolio_index_post_callback($post)
+    {
+        ?>
+        
+        <div class="row portfolio-row">
+            <div class="col-md-8">
+                <?php echo do_shortcode($post->post_content) ?>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="underline-heading">
+                    <h2><?php echo $post->post_title ?></h2>
+                </div>
+                
+                <p><?php echo iwader_truncate(get_field('the_challenge', $post->ID), 200) ?></p>
+                
+                <div class="underline-heading">
+                    <h4>Technologies</h4>
+                </div>
+                
+                <?php the_field('project_scope', $post->ID) ?>
+                
+                <div class="read-more">
+                    <a href="<?php the_permalink($post->ID) ?>">
+                        <i class="fa fa-link"></i>
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <?php
+    }
+    
+    // Credit to Justin Kelly for this truncate function - http://blog.justin.kelly.org.au/php-truncate/
+    function iwader_truncate($string, $limit, $break = '.', $pad = '...')
+    {
+        // return with no change if string is shorter than $limit
+        if (strlen($string) <= $limit) return $string;
+        
+        // is $break present between $limit and the end of the string?
+        if (false !== ($breakpoint = strpos($string, $break, $limit)))
+            if ($breakpoint < strlen($string) - 1)
+                $string = substr($string, 0, $breakpoint) . $pad;
+            
+        return $string;
+    }
+    
+    function iwader_pagination()
+    { ?>
+        <ul class="pager">
+            <?php if (get_next_posts_link('&larr; Older')) : ?>
+            <li class="previous">
+                <?php next_posts_link('&larr; Older') ?>
+            </li>
+            <?php else : ?>
+            <li class="previous disabled">
+                <a href="#">&larr; Older</a>
+            </li>
+            <?php endif; ?>
+            
+            <?php if (get_previous_posts_link('Newer &rarr;')) : ?>
+            <li class="next">
+                <?php previous_posts_link('Newer &rarr;') ?>
+            </li>
+            <?php else : ?>
+            <li class="next disabled">
+                <a href="#">Newer &rarr;</a>
+            </li>
+            <?php endif; ?>
+        </ul>
+    <?php }
+    
 ?>
