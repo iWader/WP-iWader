@@ -49,17 +49,12 @@
 						</div>
 						
 						<div class="collapse navbar-collapse pull-right">
-							<ul class="nav navbar-nav">
-								<li class="active">
-									<a href="#">Home</a>
-								</li>
-								<li>
-									<a href="#">Portfolio</a>
-								</li>
-								<li>
-									<a href="#">About Me</a>
-								</li>
-							</ul>
+                            <?php wp_nav_menu(array(
+                                      'menu'       => 'main-navigation',
+                                      'container'  => false,
+                                      'menu_class' => 'nav navbar-nav',
+                                      'depth'      => 0
+                                  )) ?>
 						</div>
 					</div>
 				</nav>

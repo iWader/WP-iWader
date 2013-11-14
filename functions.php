@@ -1,6 +1,11 @@
 <?php
 
+    // Add support for featured images
     add_theme_support('post-thumbnails');
+    
+    // Register our nav menues
+    register_nav_menu('main-navigation', 'Main Navigation');
+    register_nav_menu('footer-navigation', 'Footer Navigation');
     
     function iwader_excerpt_length()
     {

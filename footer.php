@@ -10,9 +10,13 @@
     <div id="bottom-footer">
         <div class="container">
             <div class="footer-nav pull-left hidden-phone">
-                <a href="#">Home</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact Me</a>
+                <?php echo strip_tags(wp_nav_menu(array(
+                          'menu'       => 'footer-navigation',
+                          'container'  => false,
+                          'depth'      => 0,
+                          'items_wrap' => '%3$s',
+                          'echo'       => false
+                      )), '<a>') ?>
             </div>
 
             <div class="social hidden-phone hidden-tablet">
