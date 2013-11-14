@@ -94,10 +94,7 @@
 
                 <?php endif; ?>
 
-                <ul class="pager">
-                    <li><?php previous_posts_link('Newer') ?></li>
-                    <li><?php next_posts_link('Older') ?></li>
-                </ul>
+                <?php iwader_pagination() ?>
 
             </div>
 

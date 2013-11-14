@@ -3,7 +3,16 @@ Personal Theme for Wordpress - iWader
 
 I created this theme for my own personal site. http://iwader.co.uk/(http://iwader.co.uk/).
 
-Its based on [Joiee](http://themeforest.net/item/joiee-multipurpose-responsive-html5-theme/3688793), however is heavily modified and uses bootstrap as the underlying responsive framework.
+The style is based on [Joiee](http://themeforest.net/item/joiee-multipurpose-responsive-html5-theme/3688793), however is heavily modified and uses bootstrap as the underlying responsive framework.
+
+Install
+-------
+
+1. Download the zip or tarball from github
+2. Extract your download and upload it into *wp-content/themes* of your wordpress install
+3. Activate the theme under *Appearance > Themes* from the wordpress dashboard
+
+If you want to make use of the portfolio pages you'll need to install [Advanced Custom Fields](http://www.advancedcustomfields.com/), then import the `advanced-custom-field-export.xml` file located within the theme directory. If you need help importing a file to wordpress see [this codex page](http://codex.wordpress.org/Importing_Content#WordPress) and follow the instructions under the "WordPress" heading
 
 License
 -------

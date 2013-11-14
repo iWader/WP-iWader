@@ -34,7 +34,7 @@ $postslist = query_posts($args);
 
                     <?php foreach($postslist as $post) { iwader_portfolio_index_post_callback($post); } ?>
                 
-                    <?php iwader_pagination() ?>
+                    <?php iwader_pagination('&larr; Previous', 'Next &rarr;') ?>
                 
                 <?php else : ?>
                 

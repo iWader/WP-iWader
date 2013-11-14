@@ -182,26 +182,26 @@
         return $string;
     }
     
-    function iwader_pagination()
+    function iwader_pagination($older = '&larr; Older', $newer = 'Newer &rarr;')
     { ?>
         <ul class="pager">
-            <?php if (get_next_posts_link('&larr; Older')) : ?>
+            <?php if (get_next_posts_link($older)) : ?>
             <li class="previous">
-                <?php next_posts_link('&larr; Older') ?>
+                <?php next_posts_link($older) ?>
             </li>
             <?php else : ?>
             <li class="previous disabled">
-                <a href="#">&larr; Older</a>
+                <a href="#"><?php echo $older ?></a>
             </li>
             <?php endif; ?>
             
-            <?php if (get_previous_posts_link('Newer &rarr;')) : ?>
+            <?php if (get_previous_posts_link($newer)) : ?>
             <li class="next">
-                <?php previous_posts_link('Newer &rarr;') ?>
+                <?php previous_posts_link($newer) ?>
             </li>
             <?php else : ?>
             <li class="next disabled">
-                <a href="#">Newer &rarr;</a>
+                <a href="#"><?php echo $newer ?></a>
             </li>
             <?php endif; ?>
         </ul>
