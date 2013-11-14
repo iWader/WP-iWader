@@ -26,21 +26,12 @@
 >
 
 <channel>
-	<title>iWader</title>
-	<link>http://localhost/iwader.co.uk</link>
-	<description>Just another WordPress site</description>
 	<pubDate>Thu, 14 Nov 2013 18:52:10 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
-	<wp:base_site_url>http://localhost/iwader.co.uk</wp:base_site_url>
-	<wp:base_blog_url>http://localhost/iwader.co.uk</wp:base_blog_url>
-	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>Wader</wp:author_login><wp:author_email>wader@iwader.co.uk</wp:author_email><wp:author_display_name><![CDATA[Wade Urry]]></wp:author_display_name><wp:author_first_name><![CDATA[Wade]]></wp:author_first_name><wp:author_last_name><![CDATA[Urry]]></wp:author_last_name></wp:author>
-	<item>
+    <item>
 		<title>Portfolio Single</title>
-		<link>http://localhost/iwader.co.uk/?acf=acf_portfolio-single</link>
 		<pubDate>Wed, 13 Nov 2013 23:40:55 +0000</pubDate>
-		<dc:creator>Wader</dc:creator>
-		<guid isPermaLink="false">http://localhost/iwader.co.uk/?post_type=acf&#038;p=29</guid>
 		<wp:post_id>29</wp:post_id>
 		<wp:post_date>2013-11-13 23:40:55</wp:post_date>
 		<wp:post_date_gmt>2013-11-13 23:40:55</wp:post_date_gmt>
