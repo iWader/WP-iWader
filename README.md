@@ -1,7 +1,7 @@
 Personal Theme for Wordpress - iWader
 =====================================
 
-I created this theme for my own personal site. http://iwader.co.uk/(http://iwader.co.uk/).
+I created this theme for my own personal site ([http://iwader.co.uk/](http://iwader.co.uk/)), however last minute have decided to try out the new [Ghost](http://ghost.org/) blogging platform for Node.js. This theme is fully functional and ready to use.
 
 The style is based on [Joiee](http://themeforest.net/item/joiee-multipurpose-responsive-html5-theme/3688793), however is heavily modified and uses bootstrap as the underlying responsive framework.
 

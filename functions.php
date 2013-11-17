@@ -212,4 +212,257 @@
         </ul>
     <?php }
     
+    // Create our settings pages within the WP dashboard
+    function iwader_setup_theme_menus()
+    {
+        add_submenu_page('themes.php', 'Social Footer Icons', 'Social Footer', 'manage_options', 'social-footer', 'iwader_social_footer_settings');
+    }
+    
+    add_action('admin_menu', 'iwader_setup_theme_menus');
+    
+    function iwader_social_footer_settings()
+    {
+        if (!current_user_can('manage_options'))
+            wp_die('You do not have sufficient permission to access this page.');
+        
+        if (isset($_POST['update_settings']))
+        {
+            update_option('iwader_sf_bitbucket', $_POST['sf_bitbucket']);
+            update_option('iwader_sf_facebook', $_POST['sf_facebook']);
+            update_option('iwader_sf_flickr', $_POST['sf_flickr']);
+            update_option('iwader_sf_foursquare', $_POST['sf_foursquare']);
+            update_option('iwader_sf_github', $_POST['sf_github']);
+            update_option('iwader_sf_googleplus', $_POST['sf_googleplus']);
+            update_option('iwader_sf_instagram', $_POST['sf_instagram']);
+            update_option('iwader_sf_linkedin', $_POST['sf_linkedin']);
+            update_option('iwader_sf_pinterest', $_POST['sf_pinterest']);
+            update_option('iwader_sf_skype', $_POST['sf_skype']);
+            update_option('iwader_sf_stackexchange', $_POST['sf_stackexchange']);
+            update_option('iwader_sf_stackoverflow', $_POST['sf_stackoverflow']);
+            update_option('iwader_sf_tumblr', $_POST['sf_tumblr']);
+            update_option('iwader_sf_twitter', $_POST['sf_twitter']);
+            update_option('iwader_sf_youtube', $_POST['sf_youtube']);
+        }
+        
+        ?>
+        
+        <div class="wrap">
+            <?php screen_icon('themes') ?> <h2>Social Footer Settings</h2>
+            
+            <form method="POST" action="">
+                <table class="form-table">
+                    <tr>
+                        <th style="text-align: right; width: 250px;">
+                            <label for="sf_bitbucket">
+                                BitBucket - <small>https://bitbucket.org/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_bitbucket" placeholder="BitBucket Username" value="<?php echo get_option('iwader_sf_bitbucket') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_facebook">
+                                Facebook - <small>https://www.facebook.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_facebook" placeholder="Facebook URL Handle" value="<?php echo get_option('iwader_sf_facebook') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_flickr">
+                                Flickr - <small>http://www.flickr.com/photos/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_flickr" placeholder="Flickr URL Handle" value="<?php echo get_option('iwader_sf_flickr') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_foursquare">
+                                Foursquare - <small>https://foursquare.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_foursquare" placeholder="Foursquare Username" value="<?php echo get_option('iwader_sf_foursquare') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_github">
+                                GitHub - <small>https://github.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_github" placeholder="GitHub Username" value="<?php echo get_option('iwader_sf_github') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_googleplus">
+                                Google+ - <small>https://plus.google.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_googleplus" placeholder="G+ Account #" value="<?php echo get_option('iwader_sf_googleplus') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_instagram">
+                                Instagram - <small>http://instagram.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_instagram" placeholder="Instagram Username" value="<?php echo get_option('iwader_sf_instagram') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_linkedin">
+                                LinkedIn - <small>http://www.linkedin.com/in/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_linkedin" placeholder="LinkedIn Username" value="<?php echo get_option('iwader_sf_linkedin') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_pinterest">
+                                Pinterest - <small>http://www.pinterest.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_pinterest" placeholder="Pinterest Username" value="<?php echo get_option('iwader_sf_pinterest') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_skype">
+                                Skype
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_skype" placeholder="Skype Handle" value="<?php echo get_option('iwader_sf_skype') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_stackexchange">
+                                Stack Exchange - <small>http://stackexchange.com/users/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_stackexchange" placeholder="StackExchange User #" value="<?php echo get_option('iwader_sf_stackexchange') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_stackoverflow">
+                                Stack Overflow - <small>http://stackoverflow.com/users/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_stackoverflow" placeholder="StackOverflow User #" value="<?php echo get_option('iwader_sf_stackoverflow') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_tumblr">
+                                Tumblr - <small>http://[username].tumblr.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_tumblr" placeholder="Tumblr Username" value="<?php echo get_option('iwader_sf_tumblr') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_twitter">
+                                Twitter - <small>https://twitter.com/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_twitter" placeholder="Twitter Username" value="<?php echo get_option('iwader_sf_twitter') ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: right;">
+                            <label for="sf_youtube">
+                                YouTube - <small>http://www.youtube.com/user/</small>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="text" name="sf_youtube" placeholder="YouTube Username" value="<?php echo get_option('iwader_sf_youtube') ?>">
+                        </td>
+                    </tr>
+                </table>
+                
+                <p>
+                    <input type="hidden" name="update_settings" value="true">
+                    <input type="submit" value="Save settings" class="button-primary">
+                </p>
+            </form>
+        </div>
+        
+        <?php
+    }
+    
+    function iwader_social_footer_output()
+    {
+        $output = '';
+        
+        if (get_option('iwader_sf_bitbucket'))
+            $output .= '<a href="https://bitbucket.org/' . get_option('iwader_sf_bitbucket') . '" class="social-icon"><i class="fa fa-bitbucket fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_facebook'))
+            $output .= '<a href="https://www.facebook.com/' . get_option('iwader_sf_facebook') . '" class="social-icon"><i class="fa fa-facebook fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_flickr'))
+            $output .= '<a href="http://www.flickr.com/photos/' . get_option('iwader_sf_flickr') . '" class="social-icon"><i class="fa fa-flickr fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_foursquare'))
+            $output .= '<a href="https://foursquare.com/' . get_option('iwader_sf_foursquare') . '" class="social-icon"><i class="fa fa-foursquare fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_github'))
+            $output .= '<a href="https://github.com/' . get_option('iwader_sf_github') . '" class="social-icon"><i class="fa fa-github fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_googleplus'))
+            $output .= '<a href="https://plus.google.com/' . get_option('iwader_sf_googleplus') . '" class="social-icon"><i class="fa fa-google-plus fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_instagram'))
+            $output .= '<a href="http://instagram.com/' . get_option('iwader_sf_instagram') . '" class="social-icon"><i class="fa fa-instragram fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_linkedin'))
+            $output .= '<a href="http://www.linkedin.com/in/' . get_option('iwader_sf_linkedin') . '" class="social-icon"><i class="fa fa-linkedin fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_pinterest'))
+            $output .= '<a href="http://www.pinterest.com/' . get_option('iwader_sf_pinterest') . '" class="social-icon"><i class="fa fa-pinterest fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_skype'))
+            $output .= '<a href="skype:' . get_option('iwader_sf_skype') . '" class="social-icon"><i class="fa fa-skype fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_stackexchange'))
+            $output .= '<a href="http://stackexchange.com/users/' . get_option('iwader_sf_stackexchange') . '" class="social-icon"><i class="fa fa-stack-exchange fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_stackoverflow'))
+            $output .= '<a href="http://stackoverflow.com/users/' . get_option('iwader_sf_stackoverflow') . '" class="social-icon"><i class="fa fa-stack-overflow fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_tumblr'))
+            $output .= '<a href="http://' . get_option('iwader_sf_tumblr') . '.tumblr.com/" class="social-icon"><i class="fa fa-tumblr fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_twitter'))
+            $output .= '<a href="https://twitter.com/' . get_option('iwader_sf_twitter') . '" class="social-icon"><i class="fa fa-twitter fa-3x"></i></a>';
+        
+        if (get_option('iwader_sf_youtube'))
+            $output .= '<a href="http://www.youtube.com/user/' . get_option('iwader_sf_youtube') . '" class="social-icon"><i class="fa fa-youtube fa-3x"></i></a>';
+        
+        return $output;
+    }
+    
 ?>

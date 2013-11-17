@@ -20,19 +20,12 @@
             </div>
 
             <div class="social hidden-phone hidden-tablet">
-                <a href="#" class="social-icon">
-                    <i class="fa fa-bitbucket fa-3x"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fa fa-github fa-3x"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fa fa-twitter fa-3x"></i>
-                </a>
+                <?php echo iwader_social_footer_output() ?>
             </div>
 
             <div class="copyright pull-right">
-                &copy; Wade Urry
+                <a href="http://www.iwader.co.uk/">&copy; Wade Urry</a> <?php /* Feel free to change the copyright notice, but please leave the html comment */ ?>
+                <!-- Theme created by Wade Urry - http://www.iwader.co.uk/ -->
             </div>
         </div>
     </div>
